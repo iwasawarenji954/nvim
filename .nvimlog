@@ -1,0 +1,3 @@
+WRN 2026-04-13T21:15:54.010 ?.36456    server_start:199: Failed to start server: operation not permitted: /var/folders/ky/f_bhshhs66vf7wnvv8my7bpr0000gn/T/nvim.iwasawa/6gqyn5/nvim.36456.0
+WRN 2026-04-13T21:15:54.010 ?.36457    server_start:199: Failed to start server: operation not permitted: /var/folders/ky/f_bhshhs66vf7wnvv8my7bpr0000gn/T/nvim.iwasawa/fBxA43/nvim.36457.0
+WRN 2026-04-13T21:16:14.169 ?.36538    server_start:199: Failed to start server: operation not permitted: /var/folders/ky/f_bhshhs66vf7wnvv8my7bpr0000gn/T/nvim.iwasawa/OfepJW/nvim.36538.0

@@ -4,6 +4,7 @@ return {
   opts = {
     -- Prefer eslint_d, fall back to eslint
     formatters_by_ft = {
+      go = { "goimports", "gofumpt" },
       javascript = { "eslint_d", "eslint" },
       typescript = { "eslint_d", "eslint" },
       javascriptreact = { "eslint_d", "eslint" },
@@ -22,6 +23,10 @@ return {
       if js_like[ft] then
         return { lsp_fallback = false, timeout_ms = 2000 }
       end
+
+      if ft == "go" then
+        return { lsp_fallback = true, timeout_ms = 2000 }
+      end
     end,
   },
   config = function(_, opts)
@@ -32,4 +37,3 @@ return {
     end, { desc = "Format (ESLint)" })
   end,
 }
-
