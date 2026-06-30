@@ -20,6 +20,7 @@
   "onedark.vim": { "branch": "main", "commit": "47bec7a6196a843dad195d2666c3ac84c6e80c78" },
   "plenary.nvim": { "branch": "master", "commit": "74b06c6c75e4eeb3108ec01852001636d85a932b" },
   "tagbar": { "branch": "master", "commit": "07cb8247487208124978daff8e13624667635457" },
+  "telescope.nvim": { "branch": "master", "commit": "427b576c16792edad01a92b89721d923c19ad60f" },
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
   "typescript-vim": { "branch": "master", "commit": "4740441db1e070ef8366c888c658000dd032e4cb" },
@@ -34,5 +35,6 @@
   "vim-multiple-cursors": { "branch": "master", "commit": "6456718e1d30b42c04b920c5413ca44f68f08759" },
   "vim-sensible": { "branch": "master", "commit": "0ce2d843d6f588bb0c8c7eec6449171615dc56d9" },
   "vim-vinegar": { "branch": "master", "commit": "bb1bcddf43cfebe05eb565a84ab069b357d0b3d6" },
+  "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
   "winresizer": { "branch": "master", "commit": "299076f7f79e2e2f7706b2dfacbb3c074ce53257" }
 }
