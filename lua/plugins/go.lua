@@ -20,7 +20,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     dependencies = { "williamboman/mason.nvim" },
     opts = {
-      ensure_installed = { "gopls" },
+      ensure_installed = { "gopls", "ts_ls" },
     },
   },
   {
@@ -30,6 +30,12 @@ return {
       "williamboman/mason-lspconfig.nvim",
     },
     config = function()
+      -- 補完エンジン(blink.cmp)の capabilities を全 LSP に適用
+      local ok_blink, blink = pcall(require, "blink.cmp")
+      if ok_blink then
+        vim.lsp.config("*", { capabilities = blink.get_lsp_capabilities({}, true) })
+      end
+
       local on_attach = function(_, bufnr)
         local map = function(mode, lhs, rhs, desc)
           vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, silent = true, desc = desc })
@@ -68,6 +74,18 @@ return {
       })
 
       vim.lsp.enable("gopls")
+
+      -- JavaScript / TypeScript (JSX / TSX 含む)
+      -- 整形は conform(ESLint)が担うので、ts_ls 側の整形は無効化
+      vim.lsp.config("ts_ls", {
+        on_attach = function(client, bufnr)
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentRangeFormattingProvider = false
+          on_attach(client, bufnr)
+        end,
+      })
+
+      vim.lsp.enable("ts_ls")
     end,
   },
 }
