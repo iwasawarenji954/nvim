@@ -5,6 +5,7 @@ return {
   priority = 1000,
   opts = {
     options = {
+      transparent = true,
       styles = {
         comments = "NONE",
         keywords = "NONE",
